@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace FreelancePlatform.Infrastructure.Repository
 {
-    public interface IOrderRepository
+    public interface IUserCredentialsRepository
     {
-        Task<Order> GetByIdAsync(string id);
-        Task AddAsync(Order order);
-        Task UpdateAsync(Order order);
+        Task AddAsync(UserCredentials credentials);
+        Task<UserCredentials> GetByUserIdAsync(string userId);
     }
 }
