@@ -1,5 +1,6 @@
 ﻿using FreelancePlatform.Domain.Entities;
 using FreelancePlatform.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace FreelancePlatform.Infrastructure.Repository
@@ -28,6 +29,10 @@ namespace FreelancePlatform.Infrastructure.Repository
         {
             _context.Orders.Update(order);
             await _context.SaveChangesAsync();
+        }
+        public async Task<List<Order>> GetActiveOrdersAsync()
+        {
+            return await _context.Orders.ToListAsync();
         }
     }
 }

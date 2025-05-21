@@ -16,4 +16,14 @@
     <ProjectReference Include="..\FreelancePlatform.Infrastructure\FreelancePlatform.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DesignPatterns\Adapter\" />
+    <Folder Include="DesignPatterns\Decorator\" />
+    <Folder Include="DesignPatterns\Facade\" />
+    <Folder Include="DesignPatterns\Command\" />
+    <Folder Include="DesignPatterns\Strategy\" />
+    <Folder Include="DesignPatterns\Observer\" />
+    <Folder Include="DesignPatterns\Singleton\" />
+  </ItemGroup>
+
 </Project>
