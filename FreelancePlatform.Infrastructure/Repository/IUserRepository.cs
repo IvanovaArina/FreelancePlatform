@@ -15,6 +15,6 @@ namespace FreelancePlatform.Infrastructure.Repository
     {
         Task<User> GetByIdAsync(string id);
         Task<User> GetByEmailAsync(string email);   
-        Task AddSync(User user);
+        Task AddAsync(User user);
     }
 }

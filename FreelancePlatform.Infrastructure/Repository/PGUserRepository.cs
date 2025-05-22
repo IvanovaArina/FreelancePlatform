@@ -17,7 +17,7 @@ namespace FreelancePlatform.Infrastructure.Repository
         {
             _context = context;
         }
-        public async Task AddSync(User user)
+        public async Task AddAsync(User user)
         {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
