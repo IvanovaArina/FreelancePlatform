@@ -14,7 +14,7 @@ namespace FreelancePlatform.Domain.Entities
         public decimal BasePrice { get; set; }
         public int Hours { get; set; }
         public string ClientId { get; set; } = string.Empty;
-        public string FreelancerId { get; set; } = string.Empty;
+        public string? FreelancerId { get; set; } = null;
         public bool IsUrgent {  get; set; }
         public bool HasPremiumSupport { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using FreelancePlatform.Application.DesignPatterns.Facade;
+using System.Security.Claims;
 
 namespace FreelancePlatform.Presentation.Controllers;
 
@@ -20,9 +21,12 @@ public class PaymentsController : ControllerBase
     [Authorize(Roles = "Client")]
     public async Task<IActionResult> CreateAndPayOrder(string type, string paymentType, [FromBody] CreateAndPayOrderRequest request)
     {
-        var (order, transaction) = await _orderFacade.CreateAndPayOrderAsync(type, request.Title, request.BasePrice, request.ClientId, request.Hours, paymentType);
+        var clientId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // Извлекаем clientId из токена
+        if (string.IsNullOrEmpty(clientId))
+            return Unauthorized("Client ID not found in token.");
+        var (order, transaction) = await _orderFacade.CreateAndPayOrderAsync(type, request.Title, request.BasePrice, clientId, request.Hours, paymentType);
         return Ok(new { Order = order, Transaction = transaction });
     }
 }
 
-public record CreateAndPayOrderRequest(string Title, decimal BasePrice, string ClientId, int Hours);
+public record CreateAndPayOrderRequest(string Title, decimal BasePrice, int Hours);

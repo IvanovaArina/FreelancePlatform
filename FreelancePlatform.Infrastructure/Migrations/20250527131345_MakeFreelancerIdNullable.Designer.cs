@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FreelancePlatform.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FreelancePlatform.Infrastructure.Migrations
 {
     [DbContext(typeof(FreelanceDbContext))]
-    partial class FreelanceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250527131345_MakeFreelancerIdNullable")]
+    partial class MakeFreelancerIdNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,6 +75,7 @@ namespace FreelancePlatform.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("FreelancerId")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("HasPremiumSupport")
@@ -175,7 +179,9 @@ namespace FreelancePlatform.Infrastructure.Migrations
 
                     b.HasOne("FreelancePlatform.Domain.Entities.User", null)
                         .WithMany()
-                        .HasForeignKey("FreelancerId");
+                        .HasForeignKey("FreelancerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("FreelancePlatform.Domain.Entities.UserCredentials", b =>
