@@ -34,6 +34,24 @@ public class OrdersController : ControllerBase
         };
         _notificationService.Subscribe(new EmailNotifier());
     }
+    [HttpPost("{orderId}/accept")]
+    [Authorize(Roles = "Freelancer")] // Ограничиваем доступ только для фрилансеров
+    public async Task<IActionResult> AcceptOrder(string orderId)
+    {
+        var freelancerId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(freelancerId))
+            return Unauthorized("Freelancer ID not found in token.");
+
+        try
+        {
+            var orderDto = await _orderService.AcceptOrderAsync(orderId, freelancerId, new NotificationService());
+            return Ok(orderDto);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 
     [HttpPost("create/{type}")]
     [Authorize(Roles = "Client")]
@@ -75,6 +93,6 @@ public class OrdersController : ControllerBase
         return Ok(new { order, component.Description, component.Cost });
     }
 }
-
+ 
 public record CreateOrderRequest(string Title, decimal BasePrice);
 public record EnhanceOrderRequest(bool IsUrgent, bool HasPremiumSupport);

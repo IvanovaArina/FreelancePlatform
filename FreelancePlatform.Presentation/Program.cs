@@ -173,9 +173,27 @@ builder.Services.AddSingleton<IPaymentProcessor, StripeAdapter>();
 builder.Services.AddSingleton<OrderPaymentContext>(sp =>
 {
     var context = new OrderPaymentContext();
-    context.SetStrategy(new FixedPriceStrategy());
+
+    // Простая логика: выходной — почасовая, будний — фиксированная
+    var today = DateTime.Today.DayOfWeek;
+    bool isWeekend = today == DayOfWeek.Saturday || today == DayOfWeek.Sunday;
+
+    IPaymentStrategy strategy = isWeekend
+        ? new HourlyPriceStrategy()
+        : new FixedPriceStrategy();
+
+    context.SetStrategy(strategy);
     return context;
 });
+//builder.Services.AddSingleton<OrderPaymentContext>(sp =>
+//{
+//    var context = new OrderPaymentContext();
+//    context.SetStrategy(new FixedPriceStrategy());
+//    return context;
+//});
+//builder.Services.AddSingleton<FixedPriceStrategy>();
+//builder.Services.AddSingleton<HourlyPriceStrategy>();
+//builder.Services.AddScoped<OrderPaymentContext>(); // Scoped, чтобы можно было менять стратегию
 
 // Configure JWT Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -208,6 +226,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy => policy.WithOrigins("http://localhost:5173") // адрес vite dev-сервера
+                         .AllowAnyHeader()
+                         .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -218,6 +244,8 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";
 });
 app.UseAuthentication();
+app.UseCors("AllowFrontend"); // добавить перед app.UseAuthorization()
+
 app.UseAuthorization();
 app.MapControllers();
 

@@ -65,6 +65,17 @@ namespace FreelancePlatform.Application.Services
             var orders = await _orderRepository.GetActiveOrdersAsync();
             return _mapper.Map<IReadOnlyList<OrderDto>>(orders);
         }
+        public async Task<OrderDto> AcceptOrderAsync(string orderId, string freelancerId, NotificationService notificationService)
+        {
+            var command = new AcceptOrderCommand(
+                _orderRepository,
+                _userRepository,
+                notificationService,
+                orderId,
+                freelancerId);
+            _commandInvoker.ExecuteCommand(command);
+            return _mapper.Map<OrderDto>(command.AcceptedOrder);
+        }
 
         public IOrderRepository GetOrderRepository() => _orderRepository;
         public IUserRepository GetUserRepository() => _userRepository;

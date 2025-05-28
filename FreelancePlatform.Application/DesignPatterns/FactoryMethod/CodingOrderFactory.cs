@@ -10,5 +10,7 @@ namespace FreelancePlatform.Application.DesignPatterns.FactoryMethod
         {
             return new Order { Title = title, Category = "Coding", BasePrice = basePrice };
         }
+        public string GetCategory() => "Coding";
     }
+
 }

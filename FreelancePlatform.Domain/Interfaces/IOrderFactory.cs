@@ -15,5 +15,6 @@ namespace FreelancePlatform.Domain.Interfaces
     public interface IOrderFactory
     {
         Order CreateOrder(string title, decimal basePrice);
+        string GetCategory(); // Для определения типа заказа
     }
 }
