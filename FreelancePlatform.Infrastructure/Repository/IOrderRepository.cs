@@ -13,5 +13,7 @@ namespace FreelancePlatform.Infrastructure.Repository
         Task AddAsync(Order order);
         Task UpdateAsync(Order order);
         Task<List<Order>> GetActiveOrdersAsync();
+        Task<List<Order>> GetFreeOrdersAsync();  
+
     }
 }

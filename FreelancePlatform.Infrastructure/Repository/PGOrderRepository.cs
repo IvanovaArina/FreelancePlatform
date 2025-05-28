@@ -34,5 +34,12 @@ namespace FreelancePlatform.Infrastructure.Repository
         {
             return await _context.Orders.ToListAsync();
         }
+
+        public async Task<List<Order>> GetFreeOrdersAsync()
+        {
+            return await _context.Orders
+                .Where(o => o.FreelancerId == null)
+                .ToListAsync();
+        }
     }
 }

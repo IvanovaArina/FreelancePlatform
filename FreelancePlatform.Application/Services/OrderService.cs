@@ -63,7 +63,7 @@ namespace FreelancePlatform.Application.Services
         public async Task<IReadOnlyList<OrderDto>> GetActiveOrdersAsync()
         {
             var orders = await _orderRepository.GetActiveOrdersAsync();
-            return _mapper.Map<IReadOnlyList<OrderDto>>(orders);
+            return _mapper.Map<List<OrderDto>>(orders);
         }
         public async Task<OrderDto> AcceptOrderAsync(string orderId, string freelancerId, NotificationService notificationService)
         {
@@ -75,7 +75,15 @@ namespace FreelancePlatform.Application.Services
                 freelancerId);
             _commandInvoker.ExecuteCommand(command);
             return _mapper.Map<OrderDto>(command.AcceptedOrder);
+
         }
+        public async Task<IReadOnlyList<OrderDto>> GetFreeOrdersAsync(NotificationService notificationService)
+        {
+            var orders = await _orderRepository.GetFreeOrdersAsync();
+            notificationService.Notify($"Free orders retrieved: {orders.Count} orders found.");
+            return _mapper.Map<IReadOnlyList<OrderDto>>(orders);
+        }
+
 
         public IOrderRepository GetOrderRepository() => _orderRepository;
         public IUserRepository GetUserRepository() => _userRepository;

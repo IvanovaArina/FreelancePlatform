@@ -62,6 +62,15 @@ const api = {
     return response.json();
   },
   
+  getAvailableOrders: async () => {
+    const response = await fetch(`${API_BASE}/orders/available`, {
+      headers: {
+        'Authorization': `Bearer ${getToken()}`
+      }
+    });
+    return response.json();
+  },
+  
   acceptOrder: async (orderId) => {
     const response = await fetch(`${API_BASE}/orders/${orderId}/accept`, {
       method: 'POST',
@@ -117,14 +126,23 @@ const api = {
   },
   
   // Профили
-  createProfile: async (name, skill, portfolioItem, review) => {
+  createProfile: async (name, skills, portfolio, reviews) => {
     const response = await fetch(`${API_BASE}/profiles/create`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${getToken()}`
       },
-      body: JSON.stringify({ name, skill, portfolioItem, review })
+      body: JSON.stringify({ name, skills, portfolio, reviews })
+    });
+    return response.json();
+  },
+  
+  getProfile: async (userId) => {
+    const response = await fetch(`${API_BASE}/profiles/${userId}`, {
+      headers: {
+        'Authorization': `Bearer ${getToken()}`
+      }
     });
     return response.json();
   },
@@ -514,32 +532,129 @@ const ClientDashboard = () => {
 // Компонент дашборда для фрилансеров
 const FreelancerDashboard = () => {
   const [showCreateProfile, setShowCreateProfile] = useState(false);
-  const [activeOrders, setActiveOrders] = useState([]);
+  const [availableOrders, setAvailableOrders] = useState([]);
+  const [profile, setProfile] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    loadAvailableOrders();
+    loadProfile();
+  }, []);
+
+  const loadAvailableOrders = async () => {
+    try {
+      const orders = await api.getAvailableOrders();
+      setAvailableOrders(orders);
+    } catch (error) {
+      console.error('Ошибка загрузки доступных заказов');
+    }
+  };
+
+  const loadProfile = async () => {
+    try {
+      const userId = getUserId();
+      if (userId) {
+        const profileData = await api.getProfile(userId);
+        setProfile(profileData);
+      }
+    } catch (error) {
+      console.error('Ошибка загрузки профиля');
+    }
+  };
 
   const CreateProfileForm = () => {
     const [formData, setFormData] = useState({
       name: '',
-      skill: '',
-      portfolioItem: '',
-      review: ''
+      skills: [''],
+      portfolio: [''],
+      reviews: ['']
     });
+
+    const addField = (fieldName) => {
+      setFormData(prev => ({
+        ...prev,
+        [fieldName]: [...prev[fieldName], '']
+      }));
+    };
+
+    const removeField = (fieldName, index) => {
+      setFormData(prev => ({
+        ...prev,
+        [fieldName]: prev[fieldName].filter((_, i) => i !== index)
+      }));
+    };
+
+    const updateField = (fieldName, index, value) => {
+      setFormData(prev => ({
+        ...prev,
+        [fieldName]: prev[fieldName].map((item, i) => i === index ? value : item)
+      }));
+    };
 
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        await api.createProfile(formData.name, formData.skill, formData.portfolioItem, formData.review);
+        const filteredData = {
+          name: formData.name,
+          skills: formData.skills.filter(skill => skill.trim() !== ''),
+          portfolio: formData.portfolio.filter(item => item.trim() !== ''),
+          reviews: formData.reviews.filter(review => review.trim() !== '')
+        };
+        
+        const newProfile = await api.createProfile(
+          filteredData.name, 
+          filteredData.skills, 
+          filteredData.portfolio, 
+          filteredData.reviews
+        );
+        setProfile(newProfile);
         alert('Профиль создан успешно!');
         setShowCreateProfile(false);
-        setFormData({ name: '', skill: '', portfolioItem: '', review: '' });
+        setFormData({ name: '', skills: [''], portfolio: [''], reviews: [''] });
       } catch (error) {
         alert('Ошибка создания профиля');
       }
     };
 
+    const renderFieldArray = (fieldName, placeholder) => (
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          {fieldName === 'skills' ? 'Навыки' : fieldName === 'portfolio' ? 'Портфолио' : 'Отзывы'}
+        </label>
+        {formData[fieldName].map((item, index) => (
+          <div key={index} className="flex items-center mb-2">
+            <input
+              type="text"
+              value={item}
+              onChange={(e) => updateField(fieldName, index, e.target.value)}
+              placeholder={placeholder}
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            />
+            {formData[fieldName].length > 1 && (
+              <button
+                type="button"
+                onClick={() => removeField(fieldName, index)}
+                className="ml-2 text-red-600 hover:text-red-800"
+              >
+                ✕
+              </button>
+            )}
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => addField(fieldName)}
+          className="text-blue-600 hover:text-blue-800 text-sm"
+        >
+          + Добавить {fieldName === 'skills' ? 'навык' : fieldName === 'portfolio' ? 'проект' : 'отзыв'}
+        </button>
+      </div>
+    );
+
     return (
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-lg font-medium mb-4">Создать профиль</h3>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700">Имя</label>
             <input
@@ -547,37 +662,14 @@ const FreelancerDashboard = () => {
               required
               value={formData.name}
               onChange={(e) => setFormData({...formData, name: e.target.value})}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Навыки</label>
-            <input
-              type="text"
-              required
-              value={formData.skill}
-              onChange={(e) => setFormData({...formData, skill: e.target.value})}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Портфолио</label>
-            <textarea
-              required
-              value={formData.portfolioItem}
-              onChange={(e) => setFormData({...formData, portfolioItem: e.target.value})}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700">Отзыв</label>
-            <textarea
-              required
-              value={formData.review}
-              onChange={(e) => setFormData({...formData, review: e.target.value})}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md"
-            />
-          </div>
+          
+          {renderFieldArray('skills', 'Введите навык')}
+          {renderFieldArray('portfolio', 'Описание проекта')}
+          {renderFieldArray('reviews', 'Отзыв о работе')}
+          
           <div className="flex space-x-2">
             <button
               type="submit"
@@ -599,33 +691,132 @@ const FreelancerDashboard = () => {
   };
 
   const handleAcceptOrder = async (orderId) => {
+    setLoading(true);
     try {
       await api.acceptOrder(orderId);
       alert('Заказ принят успешно!');
-      // Обновить список заказов
+      await loadAvailableOrders(); // Обновляем список заказов
     } catch (error) {
       alert('Ошибка принятия заказа');
     }
+    setLoading(false);
+  };
+
+  const getOrderTypeLabel = (type) => {
+    const types = {
+      'design': 'Дизайн',
+      'coding': 'Программирование', 
+      'marketing': 'Маркетинг'
+    };
+    return types[type] || type;
   };
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold text-gray-900">Панель фрилансера</h2>
-        <button
-          onClick={() => setShowCreateProfile(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-        >
-          <User className="w-4 h-4 inline mr-2" />
-          Создать профиль
-        </button>
+        <div className="space-x-2">
+          {!profile && (
+            <button
+              onClick={() => setShowCreateProfile(true)}
+              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              <User className="w-4 h-4 inline mr-2" />
+              Создать профиль
+            </button>
+          )}
+          <button
+            onClick={loadAvailableOrders}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          >
+            <Briefcase className="w-4 h-4 inline mr-2" />
+            Обновить заказы
+          </button>
+        </div>
       </div>
+
+      {/* Отображение профиля */}
+      {profile && (
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <h3 className="text-lg font-medium mb-4">Мой профиль</h3>
+          <div className="space-y-4">
+            <div>
+              <h4 className="font-medium text-gray-900">Имя: {profile.name}</h4>
+            </div>
+            <div>
+              <h4 className="font-medium text-gray-700">Навыки:</h4>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {profile.skills?.map((skill, index) => (
+                  <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {profile.portfolio && profile.portfolio.length > 0 && (
+              <div>
+                <h4 className="font-medium text-gray-700">Портфолио:</h4>
+                <ul className="list-disc list-inside mt-2 space-y-1">
+                  {profile.portfolio.map((item, index) => (
+                    <li key={index} className="text-gray-600">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {profile.reviews && profile.reviews.length > 0 && (
+              <div>
+                <h4 className="font-medium text-gray-700">Отзывы:</h4>
+                <div className="mt-2 space-y-2">
+                  {profile.reviews.map((review, index) => (
+                    <div key={index} className="bg-gray-50 p-3 rounded italic">
+                      "{review}"
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {showCreateProfile && <CreateProfileForm />}
 
+      {/* Доступные заказы */}
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h3 className="text-lg font-medium mb-4">Доступные заказы</h3>
-        <p className="text-gray-500">Здесь будут отображаться доступные заказы для принятия</p>
+        {availableOrders.length === 0 ? (
+          <p className="text-gray-500">Нет доступных заказов</p>
+        ) : (
+          <div className="space-y-4">
+            {availableOrders.map((order) => (
+              <div key={order.id} className="border p-4 rounded-lg hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <h4 className="font-medium text-lg">{order.title}</h4>
+                    <p className="text-gray-600 mt-1">Тип: {getOrderTypeLabel(order.type)}</p>
+                    <p className="text-green-600 font-semibold mt-2">
+                      <DollarSign className="w-4 h-4 inline" />
+                      ${order.basePrice}
+                    </p>
+                    {order.description && (
+                      <p className="text-gray-700 mt-2">{order.description}</p>
+                    )}
+                    <div className="mt-2 text-sm text-gray-500">
+                      Создан: {new Date(order.createdAt || Date.now()).toLocaleDateString()}
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => handleAcceptOrder(order.id)}
+                    disabled={loading}
+                    className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 disabled:opacity-50 ml-4"
+                  >
+                    {loading ? 'Принимаю...' : 'Принять заказ'}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -92,6 +92,14 @@ public class OrdersController : ControllerBase
             component = new PremiumSupportDecorator(component);
         return Ok(new { order, component.Description, component.Cost });
     }
+
+    [HttpGet("available")]
+    [Authorize(Roles = "Freelancer")]
+    public async Task<IActionResult> GetAvailableOrders()
+    {
+        var orders = await _orderService.GetFreeOrdersAsync(_notificationService);
+        return Ok(orders);
+    }
 }
  
 public record CreateOrderRequest(string Title, decimal BasePrice);

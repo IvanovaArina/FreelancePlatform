@@ -1,9 +1,6 @@
-﻿using FreelancePlatform.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using FreelancePlatform.Domain.Entities;
+
 
 // Этот интерфейс определяет метод для добавления профиля фрилансера.
 // Отсутствие других методов (например, Get, Update, Delete) связано с тем,
@@ -15,5 +12,6 @@ namespace FreelancePlatform.Infrastructure.Repository
     public interface IProfileRepository
     {
         Task AddAsync(FreelancerProfile profile);
+        Task<FreelancerProfile> GetProfileByUserIdAsync(string id);
     }
 }
