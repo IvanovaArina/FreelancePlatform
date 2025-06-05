@@ -14,5 +14,13 @@ namespace FreelancePlatform.Application.DesignPatterns.AbstractFactory
         {
             return new User { Email = email, Name = name, Role = "Freelancer" };
         }
+
+        public Dashboard CreateDashboard()
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.info = "I'm freelancer";
+            return dashboard;
+        }
+
     }
 }

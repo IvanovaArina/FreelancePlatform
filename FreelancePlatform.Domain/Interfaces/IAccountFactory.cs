@@ -13,5 +13,12 @@ namespace FreelancePlatform.Domain.Interfaces
     public interface IAccountFactory
     {
         User CreateUser(string email, string name);
+        Dashboard CreateDashboard();
+    }
+
+   
+    public class Dashboard
+    {
+        public string info { get; set; }
     }
 }
