@@ -1,0 +1,117 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_DB: freelance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  auth-service:
+    image: auth-service
+    container_name: auth-service
+    depends_on:
+      - postgres
+      - rabbitmq
+    ports:
+      - "5118:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=freelance;Username=postgres;Password=postgres
+      Jwt__Key: super_duper_secret_key_1234567890_32_symbols_minimum
+      Jwt__Issuer: FreelancePlatform
+      Jwt__Audience: FreelancePlatformClient
+
+  profile-service:
+    image: profile-service
+    container_name: profile-service
+    depends_on:
+      - postgres
+      - rabbitmq
+    ports:
+      - "5261:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=freelance;Username=postgres;Password=postgres
+      Jwt__Key: super_duper_secret_key_1234567890_32_symbols_minimum
+      Jwt__Issuer: FreelancePlatform
+      Jwt__Audience: FreelancePlatformClient
+
+  portfolio-service:
+    image: portfolio-service
+    container_name: portfolio-service
+    depends_on:
+      - postgres
+      - rabbitmq
+    ports:
+      - "5271:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=freelance;Username=postgres;Password=postgres
+      Jwt__Key: super_duper_secret_key_1234567890_32_symbols_minimum
+      Jwt__Issuer: FreelancePlatform
+      Jwt__Audience: FreelancePlatformClient
+
+  image-service:
+    image: image-service
+    container_name: image-service
+    depends_on:
+      - rabbitmq
+      - minio
+    ports:
+      - "5270:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+  main-api:
+    image: main-api-service
+    container_name: main-api
+    depends_on:
+      - auth-service
+      - profile-service
+      - portfolio-service
+      - image-service
+      - postgres
+      - rabbitmq
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=freelance;Username=postgres;Password=postgres
+      Jwt__Key: super_duper_secret_key_1234567890_32_symbols_minimum
+      Jwt__Issuer: FreelancePlatform
+      Jwt__Audience: FreelancePlatformClient
+
+  front:
+    image: front
+    container_name: front
+    depends_on:
+      - main-api
+      - image-service
+    ports:
+      - "5173:5173"
+
+volumes:
+  pgdata:

@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "ProfileService.Controllers.FreelancerProfileController",
+    "Method": "GetMyProfile",
+    "RelativePath": "api/freelancer/profile/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ProfileService.Models.DTOs.FreelancerProfileDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ProfileService.Controllers.FreelancerProfileController",
+    "Method": "UpdateMyProfile",
+    "RelativePath": "api/freelancer/profile/me",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ProfileService.Models.DTOs.UpdateProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

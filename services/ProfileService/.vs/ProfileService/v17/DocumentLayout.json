@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\consumers\\userregisteredconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:consumers\\userregisteredconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\controllers\\freelancerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:controllers\\freelancerprofilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\mappings\\profilemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:mappings\\profilemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\repositories\\freelancerprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:repositories\\freelancerprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\repositories\\interfaces\\ifreelancerprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:repositories\\interfaces\\ifreelancerprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\data\\profiledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:data\\profiledbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\models\\dtos\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:models\\dtos\\freelancerprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\models\\dtos\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:models\\dtos\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\models\\domain\\freelancerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:models\\domain\\freelancerprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-22T11:23:48.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-18T12:49:51.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRegisteredConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Consumers\\UserRegisteredConsumer.cs",
+              "RelativeDocumentMoniker": "Consumers\\UserRegisteredConsumer.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Consumers\\UserRegisteredConsumer.cs",
+              "RelativeToolTip": "Consumers\\UserRegisteredConsumer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:42:37.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswD4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:43:58.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FreelancerProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Controllers\\FreelancerProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FreelancerProfileController.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Controllers\\FreelancerProfileController.cs",
+              "RelativeToolTip": "Controllers\\FreelancerProfileController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:14:40.375Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfileMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Mappings\\ProfileMappingProfile.cs",
+              "RelativeDocumentMoniker": "Mappings\\ProfileMappingProfile.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Mappings\\ProfileMappingProfile.cs",
+              "RelativeToolTip": "Mappings\\ProfileMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:42:08.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FreelancerProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\FreelancerProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\FreelancerProfileRepository.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\FreelancerProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\FreelancerProfileRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:41:42.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IFreelancerProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:41:09.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FreelancerProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\FreelancerProfileDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\FreelancerProfileDto.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\FreelancerProfileDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\FreelancerProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:20:53.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProfileDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Data\\ProfileDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ProfileDbContext.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Data\\ProfileDbContext.cs",
+              "RelativeToolTip": "Data\\ProfileDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:22:37.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateProfileRequest.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\UpdateProfileRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UpdateProfileRequest.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\UpdateProfileRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\UpdateProfileRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:04:47.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FreelancerProfile.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\Domain\\FreelancerProfile.cs",
+              "RelativeDocumentMoniker": "Models\\Domain\\FreelancerProfile.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\Domain\\FreelancerProfile.cs",
+              "RelativeToolTip": "Models\\Domain\\FreelancerProfile.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T12:03:58.751Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 309,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

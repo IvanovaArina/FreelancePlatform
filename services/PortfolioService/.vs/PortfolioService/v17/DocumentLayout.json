@@ -1,0 +1,280 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\consumers\\imageprocessedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:consumers\\imageprocessedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\mappings\\portfoliomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:mappings\\portfoliomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\repoositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:repoositories\\portfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\repoositories\\interfaces\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:repoositories\\interfaces\\iportfoliorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\data\\portfoliodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:data\\portfoliodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\models\\dtos\\uptdateportfolioitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:models\\dtos\\uptdateportfolioitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\models\\dtos\\portfolioitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:models\\dtos\\portfolioitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\models\\dtos\\createportfoliorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:models\\dtos\\createportfoliorequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\models\\domain\\portfolioitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:models\\domain\\portfolioitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\portfolioservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:portfolioservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwBkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-22T17:36:18.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAowKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:22:22.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-18T15:18:04.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PortfolioController.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Controllers\\PortfolioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PortfolioController.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Controllers\\PortfolioController.cs",
+              "RelativeToolTip": "Controllers\\PortfolioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:16:30.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImageProcessedConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Consumers\\ImageProcessedConsumer.cs",
+              "RelativeDocumentMoniker": "Consumers\\ImageProcessedConsumer.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Consumers\\ImageProcessedConsumer.cs",
+              "RelativeToolTip": "Consumers\\ImageProcessedConsumer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:14:44.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PortfolioMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Mappings\\PortfolioMappingProfile.cs",
+              "RelativeDocumentMoniker": "Mappings\\PortfolioMappingProfile.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Mappings\\PortfolioMappingProfile.cs",
+              "RelativeToolTip": "Mappings\\PortfolioMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:13:47.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PortfolioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\PortfolioRepository.cs",
+              "RelativeDocumentMoniker": "Repoositories\\PortfolioRepository.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\PortfolioRepository.cs",
+              "RelativeToolTip": "Repoositories\\PortfolioRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:10:56.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IPortfolioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\Interfaces\\IPortfolioRepository.cs",
+              "RelativeDocumentMoniker": "Repoositories\\Interfaces\\IPortfolioRepository.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\Interfaces\\IPortfolioRepository.cs",
+              "RelativeToolTip": "Repoositories\\Interfaces\\IPortfolioRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:10:41.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PortfolioDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Data\\PortfolioDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\PortfolioDbContext.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Data\\PortfolioDbContext.cs",
+              "RelativeToolTip": "Data\\PortfolioDbContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:08:36.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UptdatePortfolioItemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\UptdatePortfolioItemRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\UptdatePortfolioItemRequest.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\UptdatePortfolioItemRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\UptdatePortfolioItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:07:01.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PortfolioItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\PortfolioItemDto.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\PortfolioItemDto.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\PortfolioItemDto.cs",
+              "RelativeToolTip": "Models\\DTOs\\PortfolioItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:06:19.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreatePortfolioRequest.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\CreatePortfolioRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTOs\\CreatePortfolioRequest.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\CreatePortfolioRequest.cs",
+              "RelativeToolTip": "Models\\DTOs\\CreatePortfolioRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:05:35.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PortfolioItem.cs",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\Domain\\PortfolioItem.cs",
+              "RelativeDocumentMoniker": "Models\\Domain\\PortfolioItem.cs",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\Domain\\PortfolioItem.cs",
+              "RelativeToolTip": "Models\\Domain\\PortfolioItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T15:03:58.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PortfolioService.csproj",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\PortfolioService.csproj",
+              "RelativeDocumentMoniker": "PortfolioService.csproj",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\PortfolioService.csproj",
+              "RelativeToolTip": "PortfolioService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-18T15:02:21.35Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 309,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
