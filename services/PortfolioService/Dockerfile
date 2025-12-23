@@ -12,10 +12,6 @@ WORKDIR /src
 # 1️⃣ NuGet (если используешь GitHub Packages)
 COPY nuget.config .
 # 2️⃣ Обновляем credentials для github source
-RUN dotnet nuget update source github \
-    --username IvanovaArina \
-    --password $GITHUB_TOKEN \
-    --store-password-in-clear-text
 
 # 2️⃣ csproj
 COPY PortfolioService.csproj .

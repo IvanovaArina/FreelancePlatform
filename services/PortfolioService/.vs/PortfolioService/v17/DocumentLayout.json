@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\controllers\\portfoliocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,14 +113,14 @@
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-12-22T17:36:18.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -132,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -140,7 +140,8 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T15:18:04.493Z"
+              "WhenOpened": "2025-12-18T15:18:04.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -272,7 +273,8 @@
               "RelativeToolTip": "PortfolioService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-18T15:02:21.35Z"
+              "WhenOpened": "2025-12-18T15:02:21.35Z",
+              "EditorCaption": ""
             }
           ]
         },

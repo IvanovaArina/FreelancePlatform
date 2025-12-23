@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,7 +94,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "nuget.config",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\nuget.config",
               "RelativeDocumentMoniker": "nuget.config",
@@ -107,15 +107,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAABMAAAAAAAAAAAAmwBkAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-22T17:36:18.922Z"
+              "WhenOpened": "2025-12-22T17:36:18.922Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -271,8 +272,7 @@
               "RelativeToolTip": "PortfolioService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-18T15:02:21.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T15:02:21.35Z"
             }
           ]
         },
