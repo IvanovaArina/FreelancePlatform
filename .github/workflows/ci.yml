@@ -2,9 +2,14 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
+
+# Даём доступ к чтению пакетов (обязательно для приватных GitHub Packages)
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   build-backend:
@@ -12,58 +17,52 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 8.0.x   # Если перейдёте на .NET 10 — поменяйте здесь
 
-      - name: Clear NuGet cache
-        run: dotnet nuget locals all --clear
-
-      - name: Setup NuGet auth for GitHub Packages
+      - name: Add GitHub Packages source
         run: |
-          dotnet nuget remove source github || true
-          dotnet nuget add source "https://nuget.pkg.github.com/IvanovaArina/index.json" \
+          dotnet nuget add source https://nuget.pkg.github.com/IvanovaArina/index.json \
             --name github \
             --username IvanovaArina \
-            --password "${{ secrets.GH_PACKAGES_TOKEN }}" \
+            --password ${{ secrets.GH_PACKAGES_TOKEN }} \
             --store-password-in-clear-text
-      - name: Debug token
-        run: |
-          echo "Token length: ${#GH_PACKAGES_TOKEN}"
-        env:
-          GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
-      - name: Restore & build AuthService
-        working-directory: services/AuthService
+      - name: Clear NuGet cache (опционально, но полезно при проблемах)
+        run: dotnet nuget locals all --clear
+
+      - name: Restore & Build AuthService
         run: |
+          cd services/AuthService
           dotnet restore
           dotnet build -c Release --no-restore
 
-      - name: Restore & build ProfileService
-        working-directory: services/ProfileService
+      - name: Restore & Build ProfileService
         run: |
+          cd services/ProfileService
           dotnet restore
           dotnet build -c Release --no-restore
 
-      - name: Restore & build PortfolioService
-        working-directory: services/PortfolioService
+      - name: Restore & Build PortfolioService
         run: |
+          cd services/PortfolioService
           dotnet restore
           dotnet build -c Release --no-restore
 
-      - name: Restore & build ImageService
-        working-directory: services/ImageService
+      - name: Restore & Build ImageService
         run: |
+          cd services/ImageService
           dotnet restore
           dotnet build -c Release --no-restore
 
-      - name: Restore & build MainApi
-        working-directory: services/MainApi/FreelancePlatformConnect.Api
+      - name: Restore & Build MainApi
         run: |
+          cd services/MainApi/FreelancePlatformConnect.Api
           dotnet restore
           dotnet build -c Release --no-restore
 
@@ -72,16 +71,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
+          cache-dependency-path: front/my-react-app/package-lock.json
 
-      - name: Install & build frontend
-        working-directory: front/my-react-app
+      - name: Install and build frontend
         run: |
+          cd front/my-react-app
           npm ci
           npm run build
