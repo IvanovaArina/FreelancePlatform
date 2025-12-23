@@ -14,7 +14,11 @@ WORKDIR /src
 
 # 1️⃣ Копируем NuGet.Config
 COPY nuget.config .
-
+# 2️⃣ Обновляем credentials для github source
+RUN dotnet nuget update source github \
+    --username IvanovaArina \
+    --password $GITHUB_TOKEN \
+    --store-password-in-clear-text
 # 2️⃣ Копируем csproj
 COPY ProfileService.csproj .
 

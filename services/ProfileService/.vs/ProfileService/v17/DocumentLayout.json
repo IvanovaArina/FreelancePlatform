@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\consumers\\userregisteredconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "nuget.config",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\nuget.config",
               "RelativeDocumentMoniker": "nuget.config",
@@ -99,19 +99,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-22T11:23:48.199Z"
+              "WhenOpened": "2025-12-22T11:23:48.199Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -135,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
