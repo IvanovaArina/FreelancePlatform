@@ -24,7 +24,7 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      # ✅ Создаём временный NuGet.Config (ТОЛЬКО ДЛЯ CI)
+      # ✅ Временный NuGet.Config ТОЛЬКО для CI
       - name: Create NuGet.Config for CI (GitHub Packages + nuget.org)
         shell: bash
         run: |
@@ -47,38 +47,37 @@ jobs:
         env:
           GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
-      # ✅ Чистим кэш, чтобы не тянул старое/битое
       - name: Clear NuGet caches
         run: dotnet nuget locals all --clear
 
       - name: Restore & build AuthService
         run: |
           cd services/AuthService
-          dotnet restore -c Release --configfile ../../NuGet.CI.Config
+          dotnet restore --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build ProfileService
         run: |
           cd services/ProfileService
-          dotnet restore -c Release --configfile ../../NuGet.CI.Config
+          dotnet restore --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build PortfolioService
         run: |
           cd services/PortfolioService
-          dotnet restore -c Release --configfile ../../NuGet.CI.Config
+          dotnet restore --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build ImageService
         run: |
           cd services/ImageService
-          dotnet restore -c Release --configfile ../../NuGet.CI.Config
+          dotnet restore --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build MainApi
         run: |
           cd services/MainApi/FreelancePlatformConnect.Api
-          dotnet restore -c Release --configfile ../../../NuGet.CI.Config
+          dotnet restore --configfile ../../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
   build-frontend:
