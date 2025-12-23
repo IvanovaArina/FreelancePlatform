@@ -24,10 +24,14 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x   # Если перейдёте на .NET 10 — поменяйте здесь
-          source-url: https://nuget.pkg.github.com/IvanovaArina/index.json
-        env:
-          # Ваш PAT с правами read:packages (classic token)
-          NUGET_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+
+      - name: Add GitHub Packages source
+        run: |
+          dotnet nuget add source https://nuget.pkg.github.com/IvanovaArina/index.json \
+            --name github \
+            --username IvanovaArina \
+            --password ${{ secrets.GH_PACKAGES_TOKEN }} \
+            --store-password-in-clear-text
 
       - name: Clear NuGet cache (опционально, но полезно при проблемах)
         run: dotnet nuget locals all --clear
