@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-backend:
@@ -20,45 +20,47 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      # 🔐 AUTH для GitHub Packages (SharedEvents)
+      - name: Clear NuGet cache
+        run: dotnet nuget locals all --clear
+
       - name: Setup NuGet auth for GitHub Packages
         run: |
-          dotnet nuget add source \
-            --username IvanovaArina \
-            --password ${{ secrets.GH_PACKAGES_TOKEN }} \
-            --store-password-in-clear-text \
+          dotnet nuget remove source github || true
+          dotnet nuget add source "https://nuget.pkg.github.com/IvanovaArina/index.json" \
             --name github \
-            https://nuget.pkg.github.com/IvanovaArina/index.json
+            --username IvanovaArina \
+            --password "${{ secrets.GH_PACKAGES_TOKEN }}" \
+            --store-password-in-clear-text
 
       - name: Restore & build AuthService
+        working-directory: services/AuthService
         run: |
-          cd services/AuthService
           dotnet restore
-          dotnet build -c Release
+          dotnet build -c Release --no-restore
 
       - name: Restore & build ProfileService
+        working-directory: services/ProfileService
         run: |
-          cd services/ProfileService
           dotnet restore
-          dotnet build -c Release
+          dotnet build -c Release --no-restore
 
       - name: Restore & build PortfolioService
+        working-directory: services/PortfolioService
         run: |
-          cd services/PortfolioService
           dotnet restore
-          dotnet build -c Release
+          dotnet build -c Release --no-restore
 
       - name: Restore & build ImageService
+        working-directory: services/ImageService
         run: |
-          cd services/ImageService
           dotnet restore
-          dotnet build -c Release
+          dotnet build -c Release --no-restore
 
       - name: Restore & build MainApi
+        working-directory: services/MainApi/FreelancePlatformConnect.Api
         run: |
-          cd services/MainApi/FreelancePlatformConnect.Api
           dotnet restore
-          dotnet build -c Release
+          dotnet build -c Release --no-restore
 
   build-frontend:
     name: Build frontend (React)
@@ -74,7 +76,7 @@ jobs:
           node-version: 20
 
       - name: Install & build frontend
+        working-directory: front/my-react-app
         run: |
-          cd front/my-react-app
-          npm install
+          npm ci
           npm run build
