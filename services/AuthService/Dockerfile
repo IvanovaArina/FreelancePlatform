@@ -12,15 +12,6 @@ WORKDIR /src
 
 # 1️⃣ Копируем NuGet.Config
 COPY nuget.config .
-# 2) Добавляем креды к GitHub Packages только внутри слоя сборки
-#    ВАЖНО: это нужно, чтобы dotnet restore получил доступ к приватному пакету
-RUN dotnet nuget remove source github || true && \
-    dotnet nuget add source "https://nuget.pkg.github.com/IvanovaArina/index.json" \
-      --name github \
-      --username IvanovaArina \
-      --password "${GH_PACKAGES_TOKEN}" \
-      --store-password-in-clear-text
-
 
 # 2️⃣ Копируем csproj
 COPY AuthService.csproj .
