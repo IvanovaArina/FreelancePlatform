@@ -14,7 +14,7 @@
     <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.6" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
     <PackageReference Include="Minio" Version="7.0.0" />
-    <PackageReference Include="SharedEvents" Version="1.0.2" />
+    <PackageReference Include="SharedEvents" Version="1.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
