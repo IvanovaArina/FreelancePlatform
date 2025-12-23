@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\profileservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E63C8728-A365-4417-99DE-5ED8B588BA77}|ProfileService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +82,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "nuget.config",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\nuget.config",
+              "RelativeDocumentMoniker": "nuget.config",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\nuget.config",
+              "RelativeToolTip": "nuget.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-23T08:33:22.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -86,12 +107,11 @@
               "RelativeToolTip": "Dockerfile",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-22T11:23:48.199Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-22T11:23:48.199Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -104,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserRegisteredConsumer.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Consumers\\UserRegisteredConsumer.cs",
               "RelativeDocumentMoniker": "Consumers\\UserRegisteredConsumer.cs",
@@ -116,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -124,12 +144,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAswD4AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T12:43:58.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T12:43:58.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "FreelancerProfileController.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Controllers\\FreelancerProfileController.cs",
               "RelativeDocumentMoniker": "Controllers\\FreelancerProfileController.cs",
@@ -140,12 +159,8 @@
               "WhenOpened": "2025-12-18T12:14:40.375Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ProfileMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Mappings\\ProfileMappingProfile.cs",
               "RelativeDocumentMoniker": "Mappings\\ProfileMappingProfile.cs",
@@ -157,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "FreelancerProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\FreelancerProfileRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\FreelancerProfileRepository.cs",
@@ -169,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IFreelancerProfileRepository.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IFreelancerProfileRepository.cs",
@@ -181,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FreelancerProfileDto.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\FreelancerProfileDto.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\FreelancerProfileDto.cs",
@@ -193,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ProfileDbContext.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Data\\ProfileDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ProfileDbContext.cs",
@@ -205,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UpdateProfileRequest.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\DTOs\\UpdateProfileRequest.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\UpdateProfileRequest.cs",
@@ -217,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FreelancerProfile.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\ProfileService\\Models\\Domain\\FreelancerProfile.cs",
               "RelativeDocumentMoniker": "Models\\Domain\\FreelancerProfile.cs",
