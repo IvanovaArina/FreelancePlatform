@@ -12,6 +12,12 @@ WORKDIR /src
 
 # 1️⃣ Копируем NuGet.Config
 COPY nuget.config .
+# 2️⃣ ВРЕМЕННО добавляем GitHub Packages с токеном
+RUN dotnet nuget add source https://nuget.pkg.github.com/IvanovaArina/index.json \
+    --name github \
+    --username IvanovaArina \
+    --password $GITHUB_TOKEN \
+    --store-password-in-clear-text
 
 # 2️⃣ Копируем csproj
 COPY AuthService.csproj .

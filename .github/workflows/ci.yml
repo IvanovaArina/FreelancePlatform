@@ -97,13 +97,12 @@ jobs:
 
       - name: Build Docker images
         run: |
-          docker build -t auth-service services/AuthService
-          docker build -t profile-service services/ProfileService
-          docker build -t portfolio-service services/PortfolioService
-          docker build -t image-service services/ImageService
-          docker build -t main-api-service services/MainApi/FreelancePlatformConnect.Api
-          docker build -t front front/my-react-app
-
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/auth-service:latest services/AuthService
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/profile-service:latest services/ProfileService
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/portfolio-service:latest services/PortfolioService
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/image-service:latest services/ImageService
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/main-api-service:latest services/MainApi/FreelancePlatformConnect.Api
+          docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/front:latest front/my-react-app
       - name: Start docker-compose
         run: |
           cd infra
