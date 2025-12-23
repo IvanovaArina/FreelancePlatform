@@ -12,14 +12,6 @@ WORKDIR /src
 
 # 1️⃣ Копируем NuGet.Config
 COPY nuget.config .
-# Монтируем секрет и подставляем переменные в NuGet.Config временно
-RUN --mount=type=secret,id=gh_packages_token \
-    --mount=type=secret,id=github_actor \
-    export GH_PACKAGES_TOKEN=$(cat /run/secrets/gh_packages_token) && \
-    export GITHUB_ACTOR=$(cat /run/secrets/github_actor) && \
-    sed -i "s/%GH_PACKAGES_TOKEN%/$GH_PACKAGES_TOKEN/g" nuget.config && \
-    sed -i "s/%GITHUB_ACTOR%/$GITHUB_ACTOR/g" nuget.config && \
-    dotnet restore services/AuthService/AuthService.csproj
 
 # 2️⃣ Копируем csproj
 COPY AuthService.csproj .
