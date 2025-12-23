@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\portfolioservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{B87DE55D-3E31-422C-9B07-B718FFB28D1D}|PortfolioService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -66,8 +70,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "nuget.config",
+              "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\nuget.config",
+              "RelativeDocumentMoniker": "nuget.config",
+              "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\nuget.config",
+              "RelativeToolTip": "nuget.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-23T08:37:09.8Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
@@ -103,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -111,12 +128,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAJgAAAAAAAAAAAAowKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T15:22:22.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T15:22:22.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -128,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PortfolioController.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Controllers\\PortfolioController.cs",
               "RelativeDocumentMoniker": "Controllers\\PortfolioController.cs",
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ImageProcessedConsumer.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Consumers\\ImageProcessedConsumer.cs",
               "RelativeDocumentMoniker": "Consumers\\ImageProcessedConsumer.cs",
@@ -152,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PortfolioMappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Mappings\\PortfolioMappingProfile.cs",
               "RelativeDocumentMoniker": "Mappings\\PortfolioMappingProfile.cs",
@@ -164,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\PortfolioRepository.cs",
               "RelativeDocumentMoniker": "Repoositories\\PortfolioRepository.cs",
@@ -176,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IPortfolioRepository.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Repoositories\\Interfaces\\IPortfolioRepository.cs",
               "RelativeDocumentMoniker": "Repoositories\\Interfaces\\IPortfolioRepository.cs",
@@ -188,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PortfolioDbContext.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Data\\PortfolioDbContext.cs",
               "RelativeDocumentMoniker": "Data\\PortfolioDbContext.cs",
@@ -200,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UptdatePortfolioItemRequest.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\UptdatePortfolioItemRequest.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\UptdatePortfolioItemRequest.cs",
@@ -212,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "PortfolioItemDto.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\PortfolioItemDto.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\PortfolioItemDto.cs",
@@ -224,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CreatePortfolioRequest.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\DTOs\\CreatePortfolioRequest.cs",
               "RelativeDocumentMoniker": "Models\\DTOs\\CreatePortfolioRequest.cs",
@@ -236,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PortfolioItem.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\Models\\Domain\\PortfolioItem.cs",
               "RelativeDocumentMoniker": "Models\\Domain\\PortfolioItem.cs",
@@ -248,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "PortfolioService.csproj",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\PortfolioService\\PortfolioService.csproj",
               "RelativeDocumentMoniker": "PortfolioService.csproj",
@@ -256,7 +272,8 @@
               "RelativeToolTip": "PortfolioService.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-18T15:02:21.35Z"
+              "WhenOpened": "2025-12-18T15:02:21.35Z",
+              "EditorCaption": ""
             }
           ]
         },
