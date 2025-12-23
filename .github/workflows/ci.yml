@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# Даём доступ к чтению пакетов (обязательно для приватных GitHub Packages)
 permissions:
   contents: read
   packages: read
@@ -23,8 +22,9 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x   # Если перейдёте на .NET 10 — поменяйте здесь
+          dotnet-version: 8.0.x
 
+      # 🔐 GitHub Packages auth (ОДИН РАЗ)
       - name: Add GitHub Packages source
         run: |
           dotnet nuget add source https://nuget.pkg.github.com/IvanovaArina/index.json \
@@ -33,7 +33,10 @@ jobs:
             --password ${{ secrets.GH_PACKAGES_TOKEN }} \
             --store-password-in-clear-text
 
-      - name: Clear NuGet cache (опционально, но полезно при проблемах)
+      # =========================
+      # AuthService
+      # =========================
+      - name: Clear NuGet cache (AuthService)
         run: dotnet nuget locals all --clear
 
       - name: Restore & Build AuthService
@@ -42,11 +45,23 @@ jobs:
           dotnet restore
           dotnet build -c Release --no-restore
 
+      # =========================
+      # ProfileService
+      # =========================
+      - name: Clear NuGet cache (ProfileService)
+        run: dotnet nuget locals all --clear
+
       - name: Restore & Build ProfileService
         run: |
           cd services/ProfileService
           dotnet restore
           dotnet build -c Release --no-restore
+
+      # =========================
+      # PortfolioService
+      # =========================
+      - name: Clear NuGet cache (PortfolioService)
+        run: dotnet nuget locals all --clear
 
       - name: Restore & Build PortfolioService
         run: |
@@ -54,11 +69,23 @@ jobs:
           dotnet restore
           dotnet build -c Release --no-restore
 
+      # =========================
+      # ImageService
+      # =========================
+      - name: Clear NuGet cache (ImageService)
+        run: dotnet nuget locals all --clear
+
       - name: Restore & Build ImageService
         run: |
           cd services/ImageService
           dotnet restore
           dotnet build -c Release --no-restore
+
+      # =========================
+      # MainApi
+      # =========================
+      - name: Clear NuGet cache (MainApi)
+        run: dotnet nuget locals all --clear
 
       - name: Restore & Build MainApi
         run: |
