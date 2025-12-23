@@ -1,0 +1,63 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+
+  minio:
+    image: minio/minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: freelance
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+  auth-service:
+    build:
+      context: ../../services/AuthService
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  profile-service:
+    build:
+      context: ../../services/ProfileService
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  portfolio-service:
+    build:
+      context: ../../services/PortfolioService
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  image-service:
+    build:
+      context: ../../services/ImageService
+    depends_on:
+      - rabbitmq
+      - minio
+
+  main-api:
+    build:
+      context: ../../services/MainApi/FreelancePlatformConnect.Api
+    depends_on:
+      - auth-service
+      - profile-service
+      - portfolio-service
+      - image-service
+      - postgres
+      - rabbitmq
+
+  front:
+    build:
+      context: ../../front/my-react-app
+    depends_on:
+      - main-api
+      - image-service

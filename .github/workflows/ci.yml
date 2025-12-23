@@ -105,7 +105,7 @@ jobs:
           docker build --build-arg GITHUB_TOKEN=${{ secrets.GH_PACKAGES_TOKEN }} -t ${{ secrets.DOCKERHUB_USERNAME }}/front:latest front/my-react-app
       - name: Start docker-compose
         run: |
-          cd infra
+          cd infra/infra2
           docker compose up -d
 
       - name: Wait for services
