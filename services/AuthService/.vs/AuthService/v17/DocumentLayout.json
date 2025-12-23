@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\authservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\authservice\\nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|solutionrelative:nuget.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\authservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\authservice\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{82DD2BB9-D083-468F-B6DA-B471CA85407D}|AuthService.csproj|c:\\users\\arina\\desktop\\freelanceplatform\\services\\authservice\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,15 +98,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAABMAAAAAAAAAAAAiwCQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-18T21:06:13.1Z"
+              "WhenOpened": "2025-12-18T21:06:13.1Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -122,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -134,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -146,13 +147,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "nuget.config",
               "DocumentMoniker": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\nuget.config",
               "RelativeDocumentMoniker": "nuget.config",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\nuget.config",
               "RelativeToolTip": "nuget.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-12-18T21:39:08.342Z",
               "EditorCaption": ""
