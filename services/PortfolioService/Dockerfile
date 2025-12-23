@@ -1,4 +1,4 @@
-﻿# -------- runtime --------
+﻿# -------- base runtime --------
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 8080
@@ -6,20 +6,26 @@ EXPOSE 8080
 # -------- build --------
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+ARG GITHUB_TOKEN
 
 WORKDIR /src
 
-# 1️⃣ NuGet (если используешь GitHub Packages)
+# 1️⃣ Копируем NuGet.Config
 COPY nuget.config .
-# 2️⃣ Обновляем credentials для github source
 
-# 2️⃣ csproj
+# 2️⃣ Обновляем credentials для github source
+RUN dotnet nuget update source github \
+    --username IvanovaArina \
+    --password $GITHUB_TOKEN \
+    --store-password-in-clear-text
+
+# 2️⃣ Копируем csproj
 COPY PortfolioService.csproj .
 
-# 3️⃣ restore
+# 3️⃣ Restore с GitHub Packages
 RUN dotnet restore PortfolioService.csproj
 
-# 4️⃣ остальной код
+# 4️⃣ Копируем остальной код
 COPY . .
 
 RUN dotnet build PortfolioService.csproj -c $BUILD_CONFIGURATION -o /app/build

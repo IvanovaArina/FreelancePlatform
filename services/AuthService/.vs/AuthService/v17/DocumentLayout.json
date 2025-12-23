@@ -108,7 +108,7 @@
               "RelativeDocumentMoniker": "Dockerfile",
               "ToolTip": "C:\\Users\\arina\\Desktop\\FreelancePlatform\\services\\AuthService\\Dockerfile",
               "RelativeToolTip": "Dockerfile",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAwwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-12-18T21:06:13.1Z",
               "EditorCaption": ""
@@ -159,8 +159,7 @@
               "RelativeToolTip": "nuget.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-18T21:39:08.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-18T21:39:08.342Z"
             },
             {
               "$type": "Document",
