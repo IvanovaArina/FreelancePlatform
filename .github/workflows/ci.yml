@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
   pull_request:
-    branches: ["main"]
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   build-backend:
@@ -20,51 +24,61 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Clear NuGet cache
-        run: dotnet nuget locals all --clear
-
-      - name: Setup NuGet auth for GitHub Packages
+      # ✅ Создаём временный NuGet.Config (ТОЛЬКО ДЛЯ CI)
+      - name: Create NuGet.Config for CI (GitHub Packages + nuget.org)
+        shell: bash
         run: |
-          dotnet nuget remove source github || true
-          dotnet nuget add source "https://nuget.pkg.github.com/IvanovaArina/index.json" \
-            --name github \
-            --username IvanovaArina \
-            --password "${{ secrets.GH_PACKAGES_TOKEN }}" \
-            --store-password-in-clear-text
-      - name: Debug token
-        run: |
-          echo "Token length: ${#GH_PACKAGES_TOKEN}"
+          cat > NuGet.CI.Config <<'EOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <configuration>
+            <packageSources>
+              <clear />
+              <add key="github" value="https://nuget.pkg.github.com/IvanovaArina/index.json" />
+              <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+            </packageSources>
+            <packageSourceCredentials>
+              <github>
+                <add key="Username" value="IvanovaArina" />
+                <add key="ClearTextPassword" value="${GH_PACKAGES_TOKEN}" />
+              </github>
+            </packageSourceCredentials>
+          </configuration>
+          EOF
         env:
           GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
+      # ✅ Чистим кэш, чтобы не тянул старое/битое
+      - name: Clear NuGet caches
+        run: dotnet nuget locals all --clear
+
       - name: Restore & build AuthService
-        working-directory: services/AuthService
         run: |
-          dotnet restore
+          cd services/AuthService
+          dotnet restore -c Release --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build ProfileService
-        working-directory: services/ProfileService
         run: |
-          dotnet restore
+          cd services/ProfileService
+          dotnet restore -c Release --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build PortfolioService
-        working-directory: services/PortfolioService
         run: |
-          dotnet restore
+          cd services/PortfolioService
+          dotnet restore -c Release --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build ImageService
-        working-directory: services/ImageService
         run: |
-          dotnet restore
+          cd services/ImageService
+          dotnet restore -c Release --configfile ../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
       - name: Restore & build MainApi
-        working-directory: services/MainApi/FreelancePlatformConnect.Api
         run: |
-          dotnet restore
+          cd services/MainApi/FreelancePlatformConnect.Api
+          dotnet restore -c Release --configfile ../../../NuGet.CI.Config
           dotnet build -c Release --no-restore
 
   build-frontend:
@@ -81,7 +95,7 @@ jobs:
           node-version: 20
 
       - name: Install & build frontend
-        working-directory: front/my-react-app
         run: |
+          cd front/my-react-app
           npm ci
           npm run build
