@@ -31,6 +31,11 @@ jobs:
             --username IvanovaArina \
             --password "${{ secrets.GH_PACKAGES_TOKEN }}" \
             --store-password-in-clear-text
+      - name: Debug token
+        run: |
+          echo "Token length: ${#GH_PACKAGES_TOKEN}"
+        env:
+          GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
       - name: Restore & build AuthService
         working-directory: services/AuthService
