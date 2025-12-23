@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-backend:
+    name: Build backend (.NET)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore & build AuthService
+        run: |
+          cd services/AuthService
+          dotnet restore
+          dotnet build -c Release
+
+      - name: Restore & build ProfileService
+        run: |
+          cd services/ProfileService
+          dotnet restore
+          dotnet build -c Release
+
+      - name: Restore & build PortfolioService
+        run: |
+          cd services/PortfolioService
+          dotnet restore
+          dotnet build -c Release
+
+      - name: Restore & build ImageService
+        run: |
+          cd services/ImageService
+          dotnet restore
+          dotnet build -c Release
+
+      - name: Restore & build MainApi
+        run: |
+          cd services/MainApi/FreelancePlatformConnect.Api
+          dotnet restore
+          dotnet build -c Release
+
+  build-frontend:
+    name: Build frontend (React)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & build frontend
+        run: |
+          cd front/my-react-app
+          npm install
+          npm run build
